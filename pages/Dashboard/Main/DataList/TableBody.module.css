@@ -1,0 +1,11 @@
+.tableDataAmount {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+.subtitle {
+    color: #8f8d9c;
+    font-size: 0.7rem;
+}

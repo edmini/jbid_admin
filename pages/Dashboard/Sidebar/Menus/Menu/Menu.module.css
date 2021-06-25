@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  height: 3rem;
+  padding: 0.3rem;
+  padding-left: 2rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #AAA5A5;
+  transition: 0.2s all ease-in-out;
+}
+
+.container:hover {
+  background-color: rgba(210, 210, 210, 0.2);
+  color: #585280;
+  /* border-bottom: 1px solid rgba(153, 180, 214, 0.5); */
+}
+
+.menu {
+  padding-left: 1rem;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.active {
+  border-right: 3px solid rgba(153, 180, 214, 0.5);
+  color: #585280;
+}

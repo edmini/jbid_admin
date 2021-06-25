@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+$main-color-light: #FFF;
+$sub-color-light: #F8F8F8;
+$main-text-color-light: #585280;
+$main-dimmed-light: #ADADAD;
+$main-color-green: #5DC399;
+$main-font: 'Noto Sans KR', sans-serif;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: $main-font;
+  background-color: $main-color-light;
+  color: $main-text-color-light;
+  margin: 0;
+  padding: 0;
+  transition: all 0.25s linear;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  margin-top: 0.5rem;
+  width: 100%;
+  border-collapse: collapse;
+  border:1px solid $sub-color-light;
+  tr {
+    th {
+      background-color: rgba(150, 150, 150, 0.3);
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+  }
+  thead {
+    tr {
+      th{
+        padding: 0.8rem 0;
+        border-right: 1px solid rgba(240, 240, 240, 0.3);
+        font-weight: 400;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        padding: 1rem 0;
+        font-weight: 300;
+      }
+    }
+    tr:nth-child(even){
+      background-color: $sub-color-light;
+    }
+    tr:hover {
+      background-color: rgba(150, 150, 150, 0.2);
+      cursor: pointer;
+      transition: all ease-in-out 80ms;
+    }
+  }
+  tfoot{
+    tr{
+      td{
+        padding: 0.8rem 0;
+      }
+    }
+  }
+}
+
+.pagenation {
+  $borderRaidus: 0.2rem;
+  margin: 2rem;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.2rem;
+    li{
+      align-content: center;
+      font-size: 0.9rem;
+      border-right: 1px solid $main-dimmed-light;
+      border-top: 1px solid $main-dimmed-light;
+      border-bottom: 1px solid $main-dimmed-light;
+      width: 2.4rem;
+      height: 2.4rem;
+      padding-top: 0.4rem;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(150, 150, 150, 0.3);
+      }
+      &:first-child{
+        border-left: 1px solid $main-dimmed-light;
+        border-top-left-radius: $borderRaidus;
+        border-bottom-left-radius: $borderRaidus;
+      }
+      &:last-child{
+        border-top-right-radius: $borderRaidus;
+        border-bottom-right-radius: $borderRaidus;
+      }
+      &.active {
+        background-color: rgba(200, 200, 200, 0.4);
+      }
+    }
+  }
+}

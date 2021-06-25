@@ -1,0 +1,20 @@
+.inputText {
+    transition: all linear 100ms;
+}
+.inputText::placeholder {
+    color: #a7a7a7;
+}
+.inputText:focus::placeholder {
+    color: #585280;
+}
+.inputText, .inputText:focus {
+    border: none;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    height: 2rem;
+    padding-left: 1rem;
+}
+.inputText:focus {
+    color: #585280;
+    outline: none;
+    border-bottom:1px solid rgb(62, 102, 190);
+}
