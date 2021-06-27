@@ -11,27 +11,28 @@ export default async (req, res) => {
 
 export async function getServerSideProps() {
 
-    const auth = await google.auth.getClient(
-        {
-            scopes: ['https://www.googleapis.com/auth/spreadsheets']
-        }
-    )
-    const sheets = google.sheets({ version : 'v4', auth})
+  const auth = await google.auth.getClient(
+    {
+      scopes: ['https://www.googleapis.com/auth/spreadsheets']
+    }
+  )
+  const sheets = google.sheets({ version : 'v4', auth})
 
-    const range = '기술자수첩!A:AA'
+  const range = '기술자수첩!A:AA'
 
-    const response = await sheets.spreadsheets.values.get(
-        {
-            spreadsheetId: process.env.GOOGLE_SHEET_ID,
-            range,
-        }
-    )
+  const response = await sheets.spreadsheets.values.get(
+    {
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range,
+    }
+  )
 
-    // console.table(response.data.values[2])
-    return response.data.values[2]
+  // console.table(response.data.values[2])
+  return response.data.values
 
-    
 }
 
-
+const makeJson = (data) =>{
+  
+}
 

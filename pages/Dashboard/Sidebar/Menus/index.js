@@ -13,14 +13,21 @@ export default function index() {
     },
     {
       title : '기술자수첩',
-      link : '/Dashboard/Main',
-      asLink : '/dashboard/main',
+      link : '/Dashboard/List/eng',
+      asLink : '/Dashboard/List/eng',
+      // asLink : '/dashboard/main',
       icon : '',
     },
     {
       title : '자격증접수',
-      link : '/',
-      asLink : '/',
+      link : '/Dashboard/List/lic',
+      asLink : '/Dashboard/List/lic',
+      icon : '',
+    },
+    {
+      title : '입력',
+      link : '/Dashboard/Input',
+      asLink : '/Dashboard/Input',
       icon : '',
     },
     {

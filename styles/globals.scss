@@ -116,3 +116,72 @@ table {
     }
   }
 }
+
+.container {
+  width: auto;
+  margin-left: 16rem;
+  position: relative;
+  padding: 0 4rem;
+  .inputGroup{
+    ul{
+      list-style: none;
+      font-weight: 300;
+      font-size: 0.8rem;
+      li{
+        display: inline-block;
+        div{
+          margin-top: 1rem;
+          label{
+            display: flex;
+            background-color: $sub-color-light;
+            border: 1px solid rgba(150, 150, 150, 0.4);
+            border-bottom: 0;
+            padding: 0.2rem 1rem;
+          }
+          input[type=text], input[type=date]{
+            border: 1px solid rgba(150, 150, 150, 0.4);
+            height: 1.8rem;
+            width: 12rem;
+            padding-left: 0.8rem;
+            font-size: 0.7rem;
+            color: $main-text-color-light;
+            &:focus{
+              outline: none;
+              border: 1px solid rgba(150, 150, 150, 1);
+              color: $main-text-color-light;
+            }
+            &::placeholder{
+              color: $main-dimmed-light;
+              font-size: 0.6rem;
+            }
+          }
+          input[type=textarea] {
+            width: 24rem;
+            height: 1.8rem;
+            padding-left: 0.8rem;
+            border: 1px solid rgba(150, 150, 150, 0.4);
+            color: $main-text-color-light;
+            &::placeholder{
+              color: $main-dimmed-light;
+              font-size: 0.6rem;
+            }
+          }
+          input[type=checkbox]{
+            position: relative;
+            top: 0.1px;
+            width: 12rem;
+            height: 1.2rem;
+            &::before{
+              content: '';
+              position: absolute;
+              width: 12rem;
+              height: 1.8rem;
+              // background-color: #f00;
+              border: 1px solid rgba(150, 150, 150, 0.4);
+            }
+          }
+        }
+      }
+    }
+  }
+}

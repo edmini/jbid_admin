@@ -115,4 +115,113 @@ table tfoot tr td {
 .pagenation ul li.active {
   background-color: rgba(200, 200, 200, 0.4);
 }
+
+.container {
+  width: auto;
+  margin-left: 16rem;
+  position: relative;
+  padding: 0 4rem;
+}
+
+.container .inputGroup ul {
+  list-style: none;
+  font-weight: 300;
+  font-size: 0.8rem;
+}
+
+.container .inputGroup ul li {
+  display: inline-block;
+}
+
+.container .inputGroup ul li div {
+  margin-top: 1rem;
+}
+
+.container .inputGroup ul li div label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #F8F8F8;
+  border: 1px solid rgba(150, 150, 150, 0.4);
+  border-bottom: 0;
+  padding: 0.2rem 1rem;
+}
+
+.container .inputGroup ul li div input[type=text], .container .inputGroup ul li div input[type=date] {
+  border: 1px solid rgba(150, 150, 150, 0.4);
+  height: 1.8rem;
+  width: 12rem;
+  padding-left: 0.8rem;
+  font-size: 0.7rem;
+  color: #585280;
+}
+
+.container .inputGroup ul li div input[type=text]:focus, .container .inputGroup ul li div input[type=date]:focus {
+  outline: none;
+  border: 1px solid #969696;
+  color: #585280;
+}
+
+.container .inputGroup ul li div input[type=text]::-webkit-input-placeholder, .container .inputGroup ul li div input[type=date]::-webkit-input-placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=text]:-ms-input-placeholder, .container .inputGroup ul li div input[type=date]:-ms-input-placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=text]::-ms-input-placeholder, .container .inputGroup ul li div input[type=date]::-ms-input-placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=text]::placeholder, .container .inputGroup ul li div input[type=date]::placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=textarea] {
+  width: 24rem;
+  height: 1.8rem;
+  padding-left: 0.8rem;
+  border: 1px solid rgba(150, 150, 150, 0.4);
+  color: #585280;
+}
+
+.container .inputGroup ul li div input[type=textarea]::-webkit-input-placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=textarea]:-ms-input-placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=textarea]::-ms-input-placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=textarea]::placeholder {
+  color: #ADADAD;
+  font-size: 0.6rem;
+}
+
+.container .inputGroup ul li div input[type=checkbox] {
+  position: relative;
+  top: 0.1px;
+  width: 12rem;
+  height: 1.2rem;
+}
+
+.container .inputGroup ul li div input[type=checkbox]::before {
+  content: '';
+  position: absolute;
+  width: 12rem;
+  height: 1.8rem;
+  border: 1px solid rgba(150, 150, 150, 0.4);
+}
 /*# sourceMappingURL=globals.css.map */

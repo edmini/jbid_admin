@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Pagenation from './Pagenation'
 import styles from './TableBody.module.css'
 import {format} from 'date-fns'
@@ -12,6 +14,8 @@ const changeAmount = (amount) => {
 }
 
 export default function TableBody({ lists, count }) {
+
+  const router = useRouter()
 
   const incomeTotal = lists.reduce((acc, cur) => acc + Number(cur.income), 0)
   const taxTotal = lists.reduce((acc, cur) => acc + Number(cur.tax), 0)
@@ -81,6 +85,7 @@ export default function TableBody({ lists, count }) {
         </thead>
         <tbody>
         {listData.map((item, index) => (
+          <Link href={`/Dashboard/List/${router.query.category}/${(page.currentPage-1)*page.pageSize+index}`}>
           <tr key={index}>
             <td>{(page.currentPage-1)*page.pageSize+index+1}</td>
             <td>{item.company}</td>
@@ -90,6 +95,7 @@ export default function TableBody({ lists, count }) {
             <td>{format(new Date(item.date), "yyyy-MM-dd")}</td>
             <td>{item.grade}</td>
           </tr>
+          </Link>
         ))}
         </tbody>
         <tfoot>
