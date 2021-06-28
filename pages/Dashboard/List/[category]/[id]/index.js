@@ -30,8 +30,10 @@ export default function index() {
   return (
     <div className='container'>
       {result ? (
-        menus.map((item) => (
-          <h1>{result[item]}</h1>
+        menus.map((menu, index) => (
+          <div key={index}>
+            <h3>{`${menu} : ${result[menu]}`}</h3>
+          </div>
         ))
       ) : null}
 

@@ -1,6 +1,5 @@
 import React from 'react'
 import _ from 'lodash'
-import styles from './Pagenation.module.css'
 
 export default function Pagenation({ page, selectedPage }) {
 

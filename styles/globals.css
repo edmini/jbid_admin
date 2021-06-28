@@ -24,6 +24,13 @@ a {
   text-decoration: none;
 }
 
+.container {
+  width: auto;
+  margin-left: 16rem;
+  position: relative;
+  padding: 0 4rem;
+}
+
 table {
   margin-top: 0.5rem;
   width: 100%;
@@ -116,28 +123,21 @@ table tfoot tr td {
   background-color: rgba(200, 200, 200, 0.4);
 }
 
-.container {
-  width: auto;
-  margin-left: 16rem;
-  position: relative;
-  padding: 0 4rem;
-}
-
-.container .inputGroup ul {
+.inputGroup ul {
   list-style: none;
   font-weight: 300;
   font-size: 0.8rem;
 }
 
-.container .inputGroup ul li {
+.inputGroup ul li {
   display: inline-block;
 }
 
-.container .inputGroup ul li div {
+.inputGroup ul li div {
   margin-top: 1rem;
 }
 
-.container .inputGroup ul li div label {
+.inputGroup ul li div label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +147,7 @@ table tfoot tr td {
   padding: 0.2rem 1rem;
 }
 
-.container .inputGroup ul li div input[type=text], .container .inputGroup ul li div input[type=date] {
+.inputGroup ul li div input[type=text], .inputGroup ul li div input[type=date] {
   border: 1px solid rgba(150, 150, 150, 0.4);
   height: 1.8rem;
   width: 12rem;
@@ -156,33 +156,33 @@ table tfoot tr td {
   color: #585280;
 }
 
-.container .inputGroup ul li div input[type=text]:focus, .container .inputGroup ul li div input[type=date]:focus {
+.inputGroup ul li div input[type=text]:focus, .inputGroup ul li div input[type=date]:focus {
   outline: none;
   border: 1px solid #969696;
   color: #585280;
 }
 
-.container .inputGroup ul li div input[type=text]::-webkit-input-placeholder, .container .inputGroup ul li div input[type=date]::-webkit-input-placeholder {
+.inputGroup ul li div input[type=text]::-webkit-input-placeholder, .inputGroup ul li div input[type=date]::-webkit-input-placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=text]:-ms-input-placeholder, .container .inputGroup ul li div input[type=date]:-ms-input-placeholder {
+.inputGroup ul li div input[type=text]:-ms-input-placeholder, .inputGroup ul li div input[type=date]:-ms-input-placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=text]::-ms-input-placeholder, .container .inputGroup ul li div input[type=date]::-ms-input-placeholder {
+.inputGroup ul li div input[type=text]::-ms-input-placeholder, .inputGroup ul li div input[type=date]::-ms-input-placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=text]::placeholder, .container .inputGroup ul li div input[type=date]::placeholder {
+.inputGroup ul li div input[type=text]::placeholder, .inputGroup ul li div input[type=date]::placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=textarea] {
+.inputGroup ul li div input[type=textarea] {
   width: 24rem;
   height: 1.8rem;
   padding-left: 0.8rem;
@@ -190,34 +190,34 @@ table tfoot tr td {
   color: #585280;
 }
 
-.container .inputGroup ul li div input[type=textarea]::-webkit-input-placeholder {
+.inputGroup ul li div input[type=textarea]::-webkit-input-placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=textarea]:-ms-input-placeholder {
+.inputGroup ul li div input[type=textarea]:-ms-input-placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=textarea]::-ms-input-placeholder {
+.inputGroup ul li div input[type=textarea]::-ms-input-placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=textarea]::placeholder {
+.inputGroup ul li div input[type=textarea]::placeholder {
   color: #ADADAD;
   font-size: 0.6rem;
 }
 
-.container .inputGroup ul li div input[type=checkbox] {
+.inputGroup ul li div input[type=checkbox] {
   position: relative;
   top: 0.1px;
   width: 12rem;
   height: 1.2rem;
 }
 
-.container .inputGroup ul li div input[type=checkbox]::before {
+.inputGroup ul li div input[type=checkbox]::before {
   content: '';
   position: absolute;
   width: 12rem;

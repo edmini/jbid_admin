@@ -1,34 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { engListTitles, licListTitles } from '../../../../components/static/staticData'
 import Pagenation from './Pagenation'
 import styles from './TableBody.module.css'
 import {format} from 'date-fns'
-
-const changeAmount = (amount) => {
-  if(!amount){
-    return
-  }
-  const result = amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')
-  return (`${result} 원`)
-}
 
 export default function TableBody({ lists, count }) {
 
   const router = useRouter()
 
-  const incomeTotal = lists.reduce((acc, cur) => acc + Number(cur.income), 0)
-  const taxTotal = lists.reduce((acc, cur) => acc + Number(cur.tax), 0)
-
   const [listData, setListData] = useState([])
-  const [page, setPage] = useState(
-    {
+  const [page, setPage] = useState({
       totalItem : 0,
       totalPage : 0,
       pageSize : 10,
       currentPage : 1,
-    }
-  )
+    })
+
+  const incomeTotal = lists.reduce((acc, cur) => acc + Number(cur.income), 0)
+  const taxTotal = lists.reduce((acc, cur) => acc + Number(cur.tax), 0)
+
     //useCallback 또는 useMemo 로 재 실행을 제거하는 방법 공부하기
   const pageSetup = () => {
     setPage(
@@ -60,6 +52,16 @@ export default function TableBody({ lists, count }) {
     setListData(listsPerPage)
   }
 
+  const changeAmount = (amount) => {
+    if(!amount){
+      return
+    }
+    const result = amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g,',')
+    return (`${result} 원`)
+  }
+
+  const listTitles = router.query.category === 'eng' ? engListTitles : licListTitles
+
   useEffect(()=>{
     pageSetup()
   }, [count])
@@ -74,26 +76,27 @@ export default function TableBody({ lists, count }) {
       <table>
         <thead>
           <tr>
-            <th>no</th>
-            <th>회사명</th>
-            <th>이름</th>
-            <th>분야</th>
-            <th className={styles.tableDataAmount}>입금<span className={styles.subtitle}>부가세</span></th>
-            <th>날짜</th>
-            <th>상태</th>
+            {listTitles.map((list, index)=>(
+              list.title==='입금' ?
+                <th key={index} className={styles.tableDataAmount}>입금<span className={styles.subtitle}>부가세</span></th> :
+                <th key={index}>{list.title}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
-        {listData.map((item, index) => (
-          <Link href={`/Dashboard/List/${router.query.category}/${(page.currentPage-1)*page.pageSize+index}`}>
-          <tr key={index}>
-            <td>{(page.currentPage-1)*page.pageSize+index+1}</td>
-            <td>{item.company}</td>
-            <td>{item.name}</td>
-            <td>{item.kind}</td>
-            <td className={styles.tableDataAmount}>{changeAmount(item.income)}<span className={styles.subtitle}>{changeAmount(item.tax)}</span></td>
-            <td>{format(new Date(item.date), "yyyy-MM-dd")}</td>
-            <td>{item.grade}</td>
+        {/* className={data.lastCheck ? null : styles.cancleItem } */}
+        {listData.map((data, index) => (
+          <Link  key={index} href={`/Dashboard/List/${router.query.category}/${(page.currentPage-1)*page.pageSize+index}`}>
+          <tr className={data.lastCheck ? null : styles.cancleItem } >
+            {listTitles.map((list, i)=>(
+              list.title === 'no' ?
+                <td>{(page.currentPage-1)*page.pageSize+index+1}</td> :
+              list.title === '입금' ?
+                <td className={styles.tableDataAmount}>{changeAmount(data[list.item])}<span className={styles.subtitle}>{changeAmount(data.tax)}</span></td> :
+              list.item === 'incomeDate' && data[list.item] ?
+                <td>{format(new Date(data[list.item]), 'yyyy-MM-dd')}</td> :
+                <td>{data[list.item]}</td>
+            ))}
           </tr>
           </Link>
         ))}

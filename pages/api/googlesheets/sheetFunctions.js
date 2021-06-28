@@ -39,7 +39,7 @@ export const getGoogleSheetData = async (connect, kind) => {
             jsonData.push(tempData) //json 데이터를 배열에 추가
         })
     }
-    // console.table(jsonData)
+    console.table(jsonData)
     return jsonData
 }
 
