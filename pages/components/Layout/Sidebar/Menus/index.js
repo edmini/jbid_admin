@@ -14,7 +14,6 @@ export default function index() {
       title : '기술자수첩',
       link : '/Dashboard/List/eng',
       asLink : '/Dashboard/List/eng',
-      // asLink : '/dashboard/main',
       icon : '',
     },
     {
@@ -35,15 +34,15 @@ export default function index() {
       asLink : '/',
       icon : '',
     },
-    {
-      title : 'empty',
-      link : '/',
-      asLink : '/',
-      icon : '',
-    },
+    // {
+    //   title : 'empty',
+    //   link : '/',
+    //   asLink : '/',
+    //   icon : '',
+    // },
   ])
   return (
-    <nav className={styles.container}>
+    <nav className={styles.user}>
       {menuInfo.map((item, index)=>(
         <Menu key={index} menuData={item} />
       ))}

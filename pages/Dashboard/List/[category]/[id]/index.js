@@ -29,14 +29,23 @@ export default function index() {
 
   return (
     <div className='container'>
-      {result ? (
-        menus.map((menu, index) => (
-          <div key={index}>
-            <h3>{`${menu} : ${result[menu]}`}</h3>
-          </div>
-        ))
-      ) : null}
-
+      <table>
+        <thead>
+          <tr>
+            <th>Menu</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+        {result ? (
+          menus.map((menu, index) => (
+            <tr key={index}>
+              <td>{menu}</td><td>{`${result[menu]}`}</td>
+            </tr>
+          ))
+        ) : null}
+        </tbody>
+      </table>
     </div>
   )
 }

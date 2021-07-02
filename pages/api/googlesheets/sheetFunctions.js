@@ -6,7 +6,7 @@ export const getGoogleSheetData = async (connect, kind) => {
     const googlesheetapi = google.sheets({ version : 'v4', auth : connect })
     const opt = {
         spreadsheetId : process.env.GOOGLE_SHEET_ID,
-        range : kind+'!A:AA'
+        range : kind+'!A:AB'
     }
     const getDatas = await googlesheetapi.spreadsheets.values.get(opt)
 

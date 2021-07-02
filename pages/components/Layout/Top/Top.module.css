@@ -1,0 +1,24 @@
+.top {
+  position: fixed;
+  width: 100%;
+  top: 1rem;
+  right: 4rem;
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin-bottom: 0.2rem; */
+}
+
+.profileImg {
+  border-radius: 50%;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.messageIcon {
+  color: #ADADAD;
+  font-size: 27px;
+  font-weight: 100;
+  cursor: pointer;
+}

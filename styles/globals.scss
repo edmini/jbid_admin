@@ -33,8 +33,21 @@ a {
 .container {
   width: auto;
   margin-left: 16rem;
+  margin-top: 6rem;
   position: relative;
   padding: 0 4rem;
+}
+
+.sidebar {
+  background-color: $sub-color-light;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 table {

@@ -13,3 +13,9 @@
 .cancleItem {
     text-decoration: line-through;
 }
+.compleItem {
+    color: #585280;
+}
+.nomalItem {
+    color: red;
+}

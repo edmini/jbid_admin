@@ -87,7 +87,7 @@ export default function TableBody({ lists, count }) {
         {/* className={data.lastCheck ? null : styles.cancleItem } */}
         {listData.map((data, index) => (
           <Link  key={index} href={`/Dashboard/List/${router.query.category}/${(page.currentPage-1)*page.pageSize+index}`}>
-          <tr className={data.lastCheck ? null : styles.cancleItem } >
+          <tr className={ data.compleCheck ? styles.compleItem : !data.lastCheck ? styles.cancleItem : styles.nomalItem } >
             {listTitles.map((list, i)=>(
               list.title === 'no' ?
                 <td>{(page.currentPage-1)*page.pageSize+index+1}</td> :

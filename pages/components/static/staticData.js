@@ -63,4 +63,4 @@ export const licListTitles = [
 }]
 
 
-const engKeys = ['id', 'date', 'name', 'cellPhone', 'position', 'accoundID', 'email', 'manager', 'company', 'phone', 'fax', 'kind', 'grade', 'course', 'incomeDate', 'income', 'taxCheck', 'tax', 'taxDate', 'product', 'location', 'regDate', 'compDate', 'license', 'memo', 'compleCheck', 'lastCheck']
+const engKeys = ['id', 'date', 'name', 'cellPhone', 'position', 'accoundID', 'email', 'manager', 'company', 'phone', 'fax', 'kind', 'grade', 'course', 'incomeDate', 'income', 'taxCheck', 'tax', 'taxDate', 'product', 'location', 'regDate', 'compDate', 'license', 'memo', 'toBeCompDate', 'compleCheck', 'lastCheck']
