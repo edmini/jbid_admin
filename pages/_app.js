@@ -8,7 +8,9 @@ function MyApp({ Component, pageProps }) {
     <DataContext>
       <Layout />
       {/* <Dashboard /> */}
+      {/* <div> */}
       <Component {...pageProps} />
+      {/* </div> */}
     </DataContext>
   )
 }

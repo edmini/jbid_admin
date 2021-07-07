@@ -1,13 +1,41 @@
 .top {
+  z-index: 1;/*container -5, top 1, sidebar 2*/
   position: fixed;
   width: 100%;
-  top: 1rem;
-  right: 4rem;
+  top: 0rem;
+  /* right: 4rem; */
   display: flex;
-  padding: 1rem;
+  padding: 1rem 4rem;
   justify-content: flex-end;
   align-items: center;
+  /* background-color: blue; */
+  background-color: rgba(255, 255, 255, 0.9);
   /* margin-bottom: 0.2rem; */
+}
+
+.nameWrap{
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  padding-right: 1rem;
+  /* background-color: cornsilk; */
+}
+.nameWrap h1{
+  height: 1.9rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  /* background-color: cyan; */
+  text-align: right;
+}
+.nameWrap p{
+  font-size: 0.8rem;
+  font-weight: 100;
+  width: 100%;
+  /* background-color: darkcyan; */
+  text-align: right;
 }
 
 .profileImg {
@@ -17,8 +45,9 @@
 }
 
 .messageIcon {
-  color: #ADADAD;
+  margin: 0 1rem;
+  color: #585280;
   font-size: 27px;
-  font-weight: 100;
+  font-weight: 300;
   cursor: pointer;
 }

@@ -11,6 +11,12 @@ export default function index() {
       icon : '',
     },
     {
+      title : 'Dashboard',
+      link : '/Dashboard/Main',
+      asLink : '/Dashboard/Main',
+      icon : '',
+    },
+    {
       title : '기술자수첩',
       link : '/Dashboard/List/eng',
       asLink : '/Dashboard/List/eng',

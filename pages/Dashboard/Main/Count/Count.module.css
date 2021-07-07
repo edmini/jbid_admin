@@ -1,0 +1,33 @@
+.countWrap {
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid rgba(88, 82, 128, 0.5);
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.countWrap h1{
+  font-weight: 100;
+  margin-bottom: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: rgba(240, 240, 240, 1);
+  padding: 0.3rem 1rem;
+}
+
+.countWrap p{
+  text-align: right;
+  /* background-color: burlywood; */
+  font-weight: 100;
+  color: #ADADAD;
+  padding-right: 1rem;
+}
+.countWrap p span {
+  color: #585280;
+  display: inline-block;
+  width: 1.5rem;
+  /* background-color: cadetblue; */
+  text-align: right;
+  font-weight: 500;
+}
