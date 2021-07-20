@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import TableBody from './TableBody'
 import Search from './Search'
@@ -10,7 +10,9 @@ export default function index() {
 
   const [search, setSearch] = useState('')
   const [month, setMonth] = useState(null)
+  const router = useRouter()
 
+  console.log(router)
   const selectMonth = (e) => {
     setMonth(e.target.value) 
   }
@@ -19,10 +21,14 @@ export default function index() {
     setSearch(e.target.value)
   }
 
+  const queryText = () =>{
+    setSearch(router.query.manager)
+  }
+
+
   const dayLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
   const { datas, dispatch } = useContext(SheetContext)
 
-  const router = useRouter()
   const resultData = router.query.category === 'eng' ? datas.engineers.values : datas.license.values
   
   let filteredData = []
@@ -49,6 +55,11 @@ export default function index() {
   }
 
   // console.log(Object.keys(datas.engineers.values[0]))
+
+  useEffect(()=>{
+    queryText()
+  }, [router.query.manager])
+
 
   return (
     <div>
