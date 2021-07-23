@@ -84,11 +84,11 @@ export default function TableBody({ lists, count }) {
           </tr>
         </thead>
         <tbody>
-        {/* className={data.lastCheck ? null : styles.cancleItem } */}
+        {/* className={data.lastCheck ? null : styles.cancleItem }  수첩발급 : 검은색, 접수만 : 파란색, 접수도 안됨 : 빨간색*/ }
         {listData.map((data, index) => (
           <Link  key={index} href={`/Dashboard/List/${router.query.category}/${(page.currentPage-1)*page.pageSize+index}`}>
-          <tr className={ data.compleCheck ? styles.compleItem : !data.lastCheck ? styles.cancleItem : styles.nomalItem } >
-            {listTitles.map((list, i)=>(
+          <tr className={ data.compleCheck ? styles.compleItem : !data.regDate ? styles.nomalItem : !data.lastCheck ? styles.cancleItem : styles.regStyle } >
+            {listTitles.map((list)=>(
               list.title === 'no' ?
                 <td>{(page.currentPage-1)*page.pageSize+index+1}</td> :
               list.title === '입금' ?

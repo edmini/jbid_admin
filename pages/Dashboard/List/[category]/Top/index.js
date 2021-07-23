@@ -10,7 +10,7 @@ export default function index({data, action, month, actionMonth}) {
     <section className={styles.container}>
       <Search data={data} action={action}/>
       <SelectDate month={month} actionMonth={actionMonth} />
-      <Image className={styles.profileImg} src='/kkami_.jpg' alt='profile img' width={45} height={45} />
+      <Image className={styles.profileImg} src='/kkami_.jpg' alt='profile img' width={145} height={145} />
       <h1 className={styles.messageIcon}>hosang ...</h1>
     </section>
   )

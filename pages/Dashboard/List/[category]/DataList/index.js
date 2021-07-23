@@ -12,7 +12,6 @@ export default function index() {
   const [month, setMonth] = useState(null)
   const router = useRouter()
 
-  console.log(router)
   const selectMonth = (e) => {
     setMonth(e.target.value) 
   }
@@ -22,7 +21,7 @@ export default function index() {
   }
 
   const queryText = () =>{
-    setSearch(router.query.manager)
+    router.query.manager ? setSearch(router.query.manager) : setSearch('')
   }
 
 

@@ -18,62 +18,62 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch(action.type) {
-      case 'ENGINEERS_FETCH_LOADING' :
-          return {
-              ...state,
-              engineers: {
-                  loading : true,
-                  values : [],
-                  error : null,
-              }
-          }
-      case 'ENGINEERS_FETCH_SUCCESS' :
-          return {
-              ...state,
-              engineers: {
-                  loading : false,
-                  values : action.values,
-                  error : null,
-              }
-          }
-      case 'ENGINEERS_FETCH_ERROR' :
-          return {
-              ...state,
-              engineers: {
-                  loading : false,
-                  values : [],
-                  error : "engineers fetching error",
-              }
-          }
-      case 'LICENSE_FETCH_LOADING' :
-          return {
-              ...state,
-              license : {
-                  loading : true,
-                  values : [],
-                  error : null,
-              }
-          }
-      case 'LICENSE_FETCH_SUCCESS' :
-          return {
-              ...state,
-              license : {
-                  loading : false,
-                  values : action.values,
-                  error : null,
-              }
-          }
-      case 'LICENSE_FETCH_ERROR' :
-          return {
-              ...state,
-              license : {
-                  loading : false,
-                  values : [],
-                  error : "license fetching error",
-              }
-          }
-      default :
-        return state
+    case 'ENGINEERS_FETCH_LOADING' :
+      return {
+        ...state,
+        engineers: {
+          loading : true,
+          values : [],
+          error : null,
+        }
+      }
+    case 'ENGINEERS_FETCH_SUCCESS' :
+      return {
+        ...state,
+        engineers: {
+          loading : false,
+          values : action.values,
+          error : null,
+        }
+      }
+    case 'ENGINEERS_FETCH_ERROR' :
+      return {
+        ...state,
+        engineers: {
+          loading : false,
+          values : [],
+          error : "engineers fetching error",
+        }
+      }
+    case 'LICENSE_FETCH_LOADING' :
+      return {
+        ...state,
+        license : {
+          loading : true,
+          values : [],
+          error : null,
+        }
+      }
+    case 'LICENSE_FETCH_SUCCESS' :
+      return {
+        ...state,
+        license : {
+          loading : false,
+          values : action.values,
+          error : null,
+        }
+      }
+    case 'LICENSE_FETCH_ERROR' :
+      return {
+        ...state,
+        license : {
+          loading : false,
+          values : [],
+          error : "license fetching error",
+        }
+      }
+    default :
+      return state
   }
 }
 
